@@ -2,7 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100%;
-    background-color: #f2e8cf;
+    background-color: rgb(175, 171, 171);
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
 
@@ -12,11 +12,16 @@ header{
     width: 100%;
     margin: 0 auto;
 }
+/* .task {
+    background-color: blueviolet;
+} */
 header h1{
     font-size: 40px;
     font-weight: 400;
-    color: #f2e8cf;
     margin-bottom: 24px;
+    background-image: linear-gradient(to right, rgb(33, 223, 223), rgba(179, 0, 255, 0.71));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }
 #task-form{
     display: flex;
@@ -30,3 +35,138 @@ input,button{
     background-color: none;
 }
 
+#task-input{
+    flex: 1 ;
+    background-color:rgb(96, 95, 95);
+    padding: 16px;
+    border: 1px solid silver;
+    border-radius: 16px;
+    margin-right: 16px;
+    color: lightblue;
+    font-size: 20px;
+    align-content: center;
+}
+#task-input::placeholder{
+    /* color: lightblue; */
+    background-image: linear-gradient(to right, rgb(33, 223, 223), rgba(179, 0, 255, 0.71));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#task-submit{
+    /* color: lightblue; */
+    font-size: 20px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.4s;
+    border: 1px solid silver;
+    border-radius: 16px;
+    padding: 16px;
+    background-color: rgb(96, 95, 95);
+    background-image: linear-gradient(to right, rgb(33, 223, 223), rgba(179, 0, 255, 0.71));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+
+#task-submit:hover{
+    opacity: 0.8;
+}
+
+#task-submit:active{
+    opacity: 0.6;
+}
+.container{
+    background-color:rgb(96, 95, 95);
+    max-width: 750px;
+    width: 100%;
+    margin: 32px auto;
+    border-radius: 16px;
+}
+main{
+    flex: 1 ;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list{
+    padding: 16px;
+}
+
+
+#tasks .task{
+    display: flex;
+    justify-content: space-between;
+    background-color:rgb(96, 95, 95);
+    border: 1px solid silver;
+    padding: 16px;
+    border-radius: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+}
+
+#tasks .task .content{
+    flex: 1
+}
+
+#tasks .task .content .text{
+    /* color: #f2e8cf; */
+   
+    background-color:rgb(96, 95, 95);
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+    background-image: linear-gradient(to right, rgb(33, 223, 223), rgba(179, 0, 255, 0.71));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+}
+#tasks .task .content .text:not(:read-only){
+    color:  #00c78a;
+}
+#tasks .task .actions{
+    display: flex;
+    margin: 0 -8px;
+}
+
+.task .actions button{
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 0 8px;
+    text-transform: uppercase;
+    transition: 0.4s;
+
+}
+.task .actions button:hover{
+    opacity: 0.8;
+}
+
+.task .actions button:active{
+    opacity: 0.6;
+}
+.task .actions .Edit{
+    /* color:  #00c78a; */
+    background-image: linear-gradient(to right, rgb(245, 164, 15), rgb(216, 216, 7));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    
+}
+.task .actions .Delete{
+    /* color: crimson; */
+    background-image: linear-gradient(to right, rgb(228, 8, 52), rgb(186, 184, 184));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+
+}
+.task .actions .Completed{
+    /* color: #ff9c27; */
+    background-image: linear-gradient(to right, rgb(58, 232, 58), rgba(179, 0, 255, 0.514));
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+}
+
+.strike {
+    text-decoration: line-through;
+}
