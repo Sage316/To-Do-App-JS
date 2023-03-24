@@ -1,69 +1,32 @@
-:root {
---dark: #374151;
---darker: #1F2937;
---darkest: #111827;
---gray: #6B7280;
---light: #EEE;
---pink: #EC4899;
---purple: #8B5Cf6;
-}
-
-* {
-box-sizing: border-box;
-margin: 0;
-font: "fira sans", sans-serif;
-
-}
-
-body {
+body{
     display: flex;
     flex-direction: column;
-    min-height:100vh ;
-    background: var(--gray);
-    color: #fff;
+    min-height: 100%;
+    background-color: #f2e8cf;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
 }
 
 header{
-padding: 2rem 1rem;
-max-width: 800px;
-width: 100%;
-margin: 0 auto;
+    padding: 32px 16px;
+    max-width: 700px;
+    width: 100%;
+    margin: 0 auto;
 }
-
-header h1 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    color: var(--dark);
+header h1{
+    font-size: 40px;
+    font-weight: 400;
+    color: #f2e8cf;
+    margin-bottom: 24px;
 }
-
-#new-to-do-list {
+#task-form{
     display: flex;
 
 }
 
-input, button {
+input,button{
     appearance: none;
     border: none;
     outline: none;
-    background: none;
+    background-color: none;
 }
 
-#new-to-do-input{
-    flex: 1 1 0%;
-    background-color: var(--dark);
-    padding: 1rem;
-border-radius: 1rem;
-margin-right: 1rem;
-color: var(--light);
-font-size: 1.25rem;
-}
-
-#new-to-do-input::placeholder {
-    color: var(--darkest);
-}
-
-#new-to-do-submit{
-    color: var(--purple);
-    font-size: 1.25rem;
-    font-weight: 700;
-}

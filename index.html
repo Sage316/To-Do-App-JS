@@ -4,46 +4,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>To-Do list 2023</title>
-    <link rel="stylesheet" href="main.css" />
-    <script src="main.js"></script>
-
+    <link rel="stylesheet" href="main.css">
+    <title>TodoList</title>
 </head>
 <body>
+    <div class="container">
+        <header>
+            <h1>Create your Todo-List</h1>
+            <form action="" id="task-form">
+                <input type="text" id="task-input" placeholder="What are your tasks for today?">
+                <input type="submit" id="task-submit" value="Add">
     
-<header> 
-    <h1>To-Do List 2023</h1>
-     <form id="new-to-do-list">
-        <input 
-        type="text" 
-        id="new-to-do-input"
-        placeholder="What do you have planned?"/>
-
-        <input type="submit" 
-        id="new-to-do-submit"
-        value="Add task"/>
-
-     </form>
-</header>
-
-<section class="task-list">
-<h2>Tasks</h2>
-<div id="tasks">
-    <div class="task">
-<div class="content">
-<input type="text"
-class="text"
-value="my task"
-readonly
-/>  
-</div>
-<div class="actions">
-    <button class="edit">Edit</button>
-    <button class="delete">Delete</button>
-</div>
+            </form>
+        </header>
+        <main>
+            <section class="task-list">
+                
+               <div id="tasks">
+                    
+                </div>
+    
+            </section>
+        </main>
     </div>
-</div>
-</section>
+    
 
+
+    <script src="main.js"></script>
 </body>
 </html>
