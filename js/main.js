@@ -3,19 +3,21 @@ window.addEventListener('load', () => {
     const input = document.querySelector("#task-input");
     const list = document.querySelector("#tasks");
 
-        // empty array for the new data added
+       
         var all = [];
-    
-        // event listener on submit
+
+ // event listener on submit
         form.addEventListener('submit', (e) => {
         e.preventDefault();
+            // empty array for the new data added
         
         // assign input value to variable
+       
         const task = input.value;
         if (!task) {
             return;
         }
-        // addig new items to array
+        
         var a = task.toLowerCase()
         all.push(a)
         console.log(all)
@@ -24,7 +26,7 @@ window.addEventListener('load', () => {
 
       
 
-
+// Created a div and added a task
         const task_div = document.createElement("div");
         task_div.classList.add("task");
         list.appendChild(task_div);
@@ -49,26 +51,27 @@ window.addEventListener('load', () => {
         task_actions_div.classList.add("actions");
         task_div.appendChild(task_actions_div);
 
-
+        //Edit button feature added
         const task_edit_botton = document.createElement("button");
         task_edit_botton.classList.add("Edit");
         task_edit_botton.innerHTML = "Edit";
-
+        
+        //Delete button function added
         const task_delete_button = document.createElement("button");
         task_delete_button.classList.add("Delete");
         task_delete_button.innerHTML = "Delete";
 
+        //Completed button feature added
         const task_completed_button = document.createElement("button");
         task_completed_button.classList.add("Completed");
         task_completed_button.innerHTML = "Completed";
+
 
         task_actions_div.appendChild(task_edit_botton);
         task_actions_div.appendChild(task_completed_button);
         task_actions_div.appendChild(task_delete_button);
 
        
-        task.value = localStorage.getItem("notes")
-
         task_edit_botton.addEventListener('click', () => {
 
             if (task_edit_botton.innerText.toLowerCase() == "edit") {
@@ -83,6 +86,7 @@ window.addEventListener('load', () => {
             }
         });
 
+         //Delete pop up created
         task_delete_button.addEventListener('click', () => {
             if (confirm("Are you sure you want to delete this task?")) {
                 list.removeChild(task_div);
@@ -91,10 +95,12 @@ window.addEventListener('load', () => {
             }
         })
 
+
         task_completed_button.addEventListener('click', () => {
 
-            task_input.style.textDecoration = "line-through";
+            task_item.style.textDecoration = "line-through";
             task_input.setAttribute("readonly", "readonly");
+            
 
         })
 
