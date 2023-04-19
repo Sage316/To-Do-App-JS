@@ -12,9 +12,7 @@ header{
     width: 100%;
     margin: 0 auto;
 }
-/* .task {
-    background-color: blueviolet;
-} */
+
 header h1{
     font-size: 40px;
     font-weight: 400;
@@ -109,7 +107,7 @@ main{
 }
 
 #tasks .task .content .text{
-    /* color: #f2e8cf; */
+    
    
     background-color:rgb(96, 95, 95);
     font-size: 18px;
@@ -145,14 +143,14 @@ main{
     opacity: 0.6;
 }
 .task .actions .Edit{
-    /* color:  #00c78a; */
+    
     background-image: linear-gradient(to right, rgb(245, 164, 15), rgb(216, 216, 7));
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
     
 }
 .task .actions .Delete{
-    /* color: crimson; */
+   
     background-image: linear-gradient(to right, rgb(228, 8, 52), rgb(186, 184, 184));
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -160,7 +158,7 @@ main{
 
 }
 .task .actions .Completed{
-    /* color: #ff9c27; */
+    
     background-image: linear-gradient(to right, rgb(58, 232, 58), rgba(179, 0, 255, 0.514));
     -webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
