@@ -3,8 +3,9 @@ window.addEventListener('load', () => {
     const input = document.querySelector("#task-input");
     const list = document.querySelector("#tasks");
 
-       
-        var all = [];
+      
+
+var all = [];
 
  // event listener on submit
         form.addEventListener('submit', (e) => {
@@ -37,6 +38,8 @@ window.addEventListener('load', () => {
         task_content_div.classList.add("content");
         task_div.appendChild(task_content_div);
 
+        
+
 
         const task_input = document.createElement("input");
         task_input.classList.add("text");
@@ -45,6 +48,10 @@ window.addEventListener('load', () => {
         task_input.setAttribute("readonly", "readonly");
         task_content_div.appendChild(task_input);
 
+        // added todo items to session storage
+        sessionStorage.setItem("items", task);
+        let personName = sessionStorage.getItem("lastname");  
+        document.getElementsByClassName("text").innerHTML = personName;
 
 
         const task_actions_div = document.createElement("div");
@@ -95,12 +102,11 @@ window.addEventListener('load', () => {
             }
         })
 
-
+        // made line-through text decoration visible
         task_completed_button.addEventListener('click', () => {
-
-            task_item.style.textDecoration = "line-through";
+            task_input.style.textDecoration = "line-through";
+            task_input.style.textDecorationColor = "red";
             task_input.setAttribute("readonly", "readonly");
-            
 
         })
 
