@@ -34,18 +34,14 @@ window.addEventListener('load', () => {
         sessionStorage.setItem("actions", test);
         let taskaction = sessionStorage.getItem("actions");
 
-        //Attempted to display html from session storage
-        if (taskaction === null) {
-            setBoxColour("colour");
-        } else {
-            setBoxColour(taskaction);
-        }
+        
 
         function setBoxColour(personName) {
             const example = document.getElementsByClassName("task-list");
             example.value = personName;
             example.classList.appendChild(example);
         }
+        
 
         //Creatig a new div to contain the user output (the new todo input) 
         const task_content_div = document.createElement("div");
